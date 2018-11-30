@@ -9,7 +9,7 @@ import SideDrawer from './SideDrawer';
 class Header extends Component {
   state = {
     drawerOpen: false,
-    headerTransparent: false
+    headerVisible: false
   };
 
   componentDidMount() {
@@ -20,10 +20,20 @@ class Header extends Component {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
-  handleScroll = e => {
+  handleScroll = () => {
+    // If user scrolls down, then the
+    // header background is visible
     if (window.scrollY > 0) {
       this.setState({
-        headerTransparent: true
+        headerVisible: true
+      });
+    }
+
+    // If user scrolls back up to the top
+    // then the header is invisible again
+    if (window.scrollY === 0) {
+      this.setState({
+        headerVisible: false
       });
     }
   };
@@ -37,19 +47,32 @@ class Header extends Component {
   render() {
     return (
       <div>
-        <AppBar position="fixed">
+        <AppBar
+          position="fixed"
+          className="header"
+          style={{
+            backgroundColor: this.state.headerVisible
+              ? '#2d3436'
+              : 'transparent'
+          }}
+        >
           <Toolbar>
-            <div>
-              <div>The Canal Club</div>
-              <div>Richmond's Premiere Music Venue</div>
+            <div className="header__logo">
+              <div className="header__logo-title">The Canal Club</div>
+              <div className="header__logo-subtitle">
+                Richmond's Premiere Music Venue
+              </div>
             </div>
 
-            <IconButton
-              aria-label="Menu"
-              onClick={() => this.toggleDrawer(true)}
-            >
-              <MenuIcon />
-            </IconButton>
+            <div className="header__menu-icon">
+              <IconButton
+                aria-label="Menu"
+                color="inherit"
+                onClick={() => this.toggleDrawer(true)}
+              >
+                <MenuIcon />
+              </IconButton>
+            </div>
             <SideDrawer
               open={this.state.drawerOpen}
               onClose={value => this.toggleDrawer(value)}

@@ -1,0 +1,21 @@
+.header {
+  padding: 1rem 0;
+  transition: all 300ms ease-in;
+
+  &__logo-title {
+    font-family: 'Oswald', Helvetica, Arial, sans-serif;
+    font-size: $font-xl;
+    font-weight: 200;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+  }
+
+  &__logo-subtitle {
+    font-size: $font-s;
+    text-align: center;
+  }
+
+  &__menu-icon {
+    margin: 0 0 0 auto;
+  }
+}

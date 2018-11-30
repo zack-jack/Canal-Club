@@ -1,0 +1,11 @@
+.side-drawer {
+  font-size: $font-s;
+
+  &__list {
+    margin-top: 3rem !important;
+  }
+
+  &__item {
+    padding: 3rem 20rem 3rem 3rem !important;
+  }
+}
