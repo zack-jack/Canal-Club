@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Countdown from './Countdown';
 import FeaturedSlider from './FeaturedSlider';
 
 const Featured = () => {
@@ -9,6 +10,7 @@ const Featured = () => {
       <div className="featured__artist">
         <div className="featured__artist-name">Arctic Monkeys</div>
       </div>
+      <Countdown />
     </div>
   );
 };
