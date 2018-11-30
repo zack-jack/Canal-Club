@@ -1,0 +1,20 @@
+.featured-slider {
+  overflow: hidden;
+
+  &__image {
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    height: 100vh;
+
+    &--1 {
+      background: url('../images/Slide1.jpg');
+    }
+    &--2 {
+      background: url('../images/Slide2.jpg');
+    }
+    &--3 {
+      background: url('../images/Slide3.jpg');
+    }
+  }
+}

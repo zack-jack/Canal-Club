@@ -52,7 +52,7 @@ class Header extends Component {
           className="header"
           style={{
             backgroundColor: this.state.headerVisible
-              ? '#2d3436'
+              ? '#212121'
               : 'transparent'
           }}
         >

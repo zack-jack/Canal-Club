@@ -1,0 +1,31 @@
+.featured {
+  position: relative;
+
+  &__artist {
+    background: rgba($dark-grey, 0.4);
+    border: 1px solid rgba($white, 0.6);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 16rem;
+    width: 35rem;
+    text-transform: uppercase;
+    transform: translate(-50%, -50%);
+  }
+
+  &__artist-name {
+    background: rgba($white, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba($white, 0.6);
+    color: $white;
+    height: 14.6rem;
+    margin: 0.6rem;
+    padding: 0;
+    font-family: 'Oswald', Helvetica, Arial, sans-serif;
+    font-size: $font-l;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
