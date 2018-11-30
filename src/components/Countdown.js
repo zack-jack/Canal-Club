@@ -43,6 +43,21 @@ class Countdown extends Component {
     }
   }
 
+  renderCountdownItems() {
+    const timeUnits = ['days', 'hours', 'minutes', 'seconds'];
+
+    const items = timeUnits.map(unit => {
+      return (
+        <div className="countdown__item" key={unit}>
+          <div className="countdown__number">{this.state[unit]}</div>
+          <div className="countdown__label">{unit}</div>
+        </div>
+      );
+    });
+
+    return items;
+  }
+
   componentDidMount() {
     setInterval(() => this.getRemainingTime(this.state.eventDate), 1000);
   }
@@ -54,16 +69,7 @@ class Countdown extends Component {
           <div className="countdown__top">
             {this.state.eventPassed ? 'Event is over' : 'Event starts in:'}
           </div>
-          <div className="countdown__bottom">
-            <div className="countdown__number">{this.state.days}</div>
-            <div className="countdown__label">Days</div>
-            <div className="countdown__number">{this.state.hours}</div>
-            <div className="countdown__label">Hours</div>
-            <div className="countdown__number">{this.state.minutes}</div>
-            <div className="countdown__label">Minutes</div>
-            <div className="countdown__number">{this.state.seconds}</div>
-            <div className="countdown__label">Seconds</div>
-          </div>
+          <div className="countdown__bottom">{this.renderCountdownItems()}</div>
         </div>
       </Slide>
     );

@@ -1,0 +1,37 @@
+.countdown {
+  color: $white;
+  position: absolute;
+  bottom: 0;
+
+  &__top {
+    background: $red;
+    font-size: $font-m;
+    padding: 1rem;
+    text-transform: uppercase;
+  }
+
+  &__bottom {
+    display: flex;
+    background: $dark-red;
+    padding: 1rem 2rem 2rem;
+  }
+
+  &__item {
+    text-align: right;
+    margin-right: 5rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__number {
+    font-size: $font-xxl;
+  }
+
+  &__label {
+    font-size: $font-s;
+
+    text-transform: uppercase;
+  }
+}
