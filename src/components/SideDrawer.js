@@ -5,8 +5,8 @@ import ListItem from '@material-ui/core/ListItem';
 
 const SideDrawer = props => {
   const navList = [
-    'Featured',
-    'Venue Info',
+    'Featured Artist',
+    'Event Info',
     'Highlights',
     'Pricing',
     'Location'
