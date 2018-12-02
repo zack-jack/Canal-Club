@@ -1,6 +1,5 @@
 .event-info {
   padding: 15rem 0;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
 
   &__card {
     height: 45rem;
@@ -9,16 +8,18 @@
 
   &__card-header {
     text-transform: uppercase;
+    margin-bottom: 2rem;
   }
 
   &__card-header-title {
-    color: $red !important;
-    font-family: 'Oswald', Helvetica, Arial, sans-serif !important;
-    font-size: $font-l !important;
+    color: $red;
+    font-family: 'Oswald', Helvetica, Arial, sans-serif;
+    font-size: $font-l;
+    margin-bottom: 2rem;
   }
 
   &__card-header-subtitle {
-    font-size: $font-m !important;
+    font-size: $font-m;
   }
 
   &__card-body {
@@ -32,13 +33,5 @@
   &__card-body-text {
     font-size: $font-s;
     margin-bottom: 2rem;
-  }
-
-  &__action {
-  }
-
-  &__button {
-    font-size: $font-xs !important;
-    margin-right: 1rem !important;
   }
 }

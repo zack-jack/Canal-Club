@@ -9,7 +9,8 @@ const SideDrawer = props => {
     'Event Info',
     'Highlights',
     'Pricing',
-    'Location'
+    'Location',
+    'Menu'
   ];
 
   const renderlistItems = navList.map(listItem => {
@@ -17,6 +18,7 @@ const SideDrawer = props => {
       <ListItem
         button
         className="side-drawer__item"
+        style={{ padding: '3rem 20rem 3rem 3rem' }}
         onClick={() => console.log(listItem)}
         key={listItem}
       >
@@ -32,7 +34,11 @@ const SideDrawer = props => {
       className="side-drawer"
       onClose={() => props.onClose(false)}
     >
-      <List component="nav" className="side-drawer__list">
+      <List
+        component="nav"
+        style={{ paddingTop: '3rem' }}
+        className="side-drawer__list"
+      >
         {renderlistItems}
       </List>
     </Drawer>

@@ -53,7 +53,8 @@ class Header extends Component {
           style={{
             backgroundColor: this.state.headerVisible
               ? '#212121'
-              : 'transparent'
+              : 'transparent',
+            boxShadow: 'none'
           }}
         >
           <Toolbar>

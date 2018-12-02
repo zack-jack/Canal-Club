@@ -1,12 +1,10 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
 import Zoom from 'react-reveal/Zoom';
 
 const EventInfo = () => {
@@ -21,20 +19,14 @@ const EventInfo = () => {
       >
         <Grid item xs={3}>
           <Zoom duration={400}>
-            <Card raised="true" className="event-info__card">
+            <Card raised={true} className="event-info__card">
               <CardContent className="event-info__card-header">
-                <Typography
-                  gutterBottom="true"
-                  className="event-info__card-header-title"
-                >
+                <div className="event-info__card-header-title">
                   Arctic Monkeys
-                </Typography>
-                <Typography
-                  gutterBottom="true"
-                  className="event-info__card-header-subtitle"
-                >
+                </div>
+                <div className="event-info__card-header-subtitle">
                   with Mini Mansions
-                </Typography>
+                </div>
               </CardContent>
               <Divider variant="middle" />
               <CardContent className="event-info__card-body">
@@ -48,11 +40,12 @@ const EventInfo = () => {
               <CardActions className="event-info__action">
                 <Button
                   variant="contained"
-                  size="large"
                   color="primary"
+                  size="large"
+                  style={{ fontSize: '1.2rem' }}
                   className="event-info__button"
                 >
-                  Learn More
+                  <div className="event-info__button-text">Learn More</div>
                 </Button>
               </CardActions>
             </Card>
@@ -61,20 +54,12 @@ const EventInfo = () => {
 
         <Grid item xs={3}>
           <Zoom duration={400} delay={400}>
-            <Card raised="true" className="event-info__card">
+            <Card raised={true} className="event-info__card">
               <CardContent className="event-info__card-header">
-                <Typography
-                  gutterBottom="true"
-                  className="event-info__card-header-title"
-                >
-                  Tickets
-                </Typography>
-                <Typography
-                  gutterBottom="true"
-                  className="event-info__card-header-subtitle"
-                >
+                <div className="event-info__card-header-title">Tickets</div>
+                <div className="event-info__card-header-subtitle">
                   Powered by TicketFly
-                </Typography>
+                </div>
               </CardContent>
               <Divider variant="middle" />
               <CardContent className="event-info__card-body">
@@ -90,6 +75,7 @@ const EventInfo = () => {
                   variant="contained"
                   color="primary"
                   size="large"
+                  style={{ fontSize: '1.2rem' }}
                   className="event-info__button"
                 >
                   Get Tickets
@@ -101,20 +87,14 @@ const EventInfo = () => {
 
         <Grid item xs={3}>
           <Zoom duration={400} delay={800}>
-            <Card raised="true" className="event-info__card">
+            <Card raised={true} className="event-info__card">
               <CardContent className="event-info__card-header">
-                <Typography
-                  gutterBottom="true"
-                  className="event-info__card-header-title"
-                >
+                <div className="event-info__card-header-title">
                   The Canal Club
-                </Typography>
-                <Typography
-                  gutterBottom="true"
-                  className="event-info__card-header-subtitle"
-                >
+                </div>
+                <div className="event-info__card-header-subtitle">
                   Richmond, Virginia
-                </Typography>
+                </div>
               </CardContent>
               <Divider variant="middle" />
               <CardContent className="event-info__card-body">
@@ -133,6 +113,7 @@ const EventInfo = () => {
                   variant="contained"
                   color="primary"
                   size="large"
+                  style={{ fontSize: '1.2rem', marginRight: '1rem' }}
                   className="event-info__button"
                 >
                   FAQ
@@ -141,6 +122,7 @@ const EventInfo = () => {
                   variant="outlined"
                   color="primary"
                   size="large"
+                  style={{ fontSize: '1.2rem' }}
                   className="event-info__button"
                 >
                   Menu

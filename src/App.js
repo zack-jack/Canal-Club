@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+
+import theme from './theme';
 
 import 'normalize.css';
 import './styles/App.scss';
@@ -10,11 +13,13 @@ import EventInfo from './components/EventInfo';
 class App extends Component {
   render() {
     return (
-      <div className="App" style={{ height: '1500px' }}>
-        <Header />
-        <Featured />
-        <EventInfo />
-      </div>
+      <MuiThemeProvider theme={theme}>
+        <div className="App">
+          <Header />
+          <Featured />
+          <EventInfo />
+        </div>
+      </MuiThemeProvider>
     );
   }
 }
