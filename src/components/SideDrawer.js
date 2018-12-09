@@ -7,7 +7,7 @@ const SideDrawer = props => {
   const navList = [
     'Featured Artist',
     'Event Info',
-    'Highlights',
+    'Latest News',
     'Pricing',
     'Location',
     'Menu'

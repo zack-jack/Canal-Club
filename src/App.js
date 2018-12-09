@@ -9,6 +9,7 @@ import './styles/App.scss';
 import Header from './components/Header';
 import Featured from './components/Featured';
 import EventInfo from './components/EventInfo';
+import Latest from './components/Latest';
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
           <Header />
           <Featured />
           <EventInfo />
+          <Latest />
         </div>
       </MuiThemeProvider>
     );
