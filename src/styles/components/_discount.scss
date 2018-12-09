@@ -1,0 +1,58 @@
+.discount {
+  margin-top: 5rem;
+  margin-bottom: 15rem;
+
+  &__header {
+    color: $red;
+    font-family: 'Oswald', Helvetica, Arial, sans-serif;
+    font-size: $font-l;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+  }
+
+  &__image-container {
+    height: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__image {
+    background: url('../images/album.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 80%;
+    width: 80%;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__percentage-container {
+    color: $red;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Oswald', Helvetica, Arial, sans-serif;
+  }
+
+  &__percentage {
+    font-size: $font-xxl;
+    margin-right: 2rem;
+
+    &--off {
+      align-self: flex-end;
+      font-size: $font-l;
+    }
+  }
+
+  &__copy {
+    font-size: $font-s;
+    line-height: 3rem;
+    margin: 4rem 0;
+    text-align: justify;
+    width: 60%;
+  }
+}

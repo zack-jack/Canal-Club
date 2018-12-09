@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
 import Fade from 'react-reveal/Fade';
 import Slide from 'react-reveal/Slide';
 
@@ -24,28 +26,59 @@ class Discount extends Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <Fade onReveal={() => this.incPercentage()}>
-            <div>
-              <div>{this.state.discountStart}%</div>
-              <div>off</div>
-            </div>
-          </Fade>
+      <div className="discount">
+        <Fade>
+          <h2 className="discount__header">Get the latest album today</h2>
+        </Fade>
 
-          <Slide right>
-            <div>
-              <h3>Get 30% off of the latest album</h3>
-              <p>
-                Franzen wolf disrupt pour-over yr fixie woke chambray whatever
-                salvia intelligentsia. Ugh direct trade artisan man bun. Migas
-                pork belly vexillologist portland ennui wayfarers church-key
-                blog marfa vape man braid vegan.
-              </p>
-              <div>button goes here</div>
-            </div>
-          </Slide>
-        </div>
+        <Grid
+          container
+          direction="row"
+          justify="center"
+          alignItems="center"
+          spacing={40}
+        >
+          <Grid item xs={6} className="discount__left">
+            <Slide left>
+              <div className="discount__image-container">
+                <img
+                  alt="Tranquility Base Hotel & Casino Album"
+                  className="discount__image"
+                />
+              </div>
+            </Slide>
+          </Grid>
+
+          <Grid item xs={6} className="discount__right">
+            <Fade onReveal={() => this.incPercentage()}>
+              <div className="discount__percentage-container">
+                <div className="discount__percentage">
+                  {this.state.discountStart}%
+                </div>
+                <div className="discount__percentage--off">off</div>
+              </div>
+            </Fade>
+
+            <Fade>
+              <div className="discount__content">
+                <p className="discount__copy">
+                  Franzen wolf disrupt pour-over yr fixie woke chambray whatever
+                  salvia. Ugh direct trade artisan man bun. Migas pork belly
+                  portland ennui wayfarers marfa vape man braid vegan.
+                </p>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="large"
+                  style={{ fontSize: '1.2rem' }}
+                  className="discount__button"
+                >
+                  Buy now
+                </Button>
+              </div>
+            </Fade>
+          </Grid>
+        </Grid>
       </div>
     );
   }

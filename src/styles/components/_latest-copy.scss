@@ -1,0 +1,42 @@
+.latest-copy-container {
+  margin: 10rem 0;
+}
+
+.latest-copy {
+  &__header {
+    color: $red;
+    font-family: 'Oswald', Helvetica, Arial, sans-serif;
+    font-size: $font-l;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &__copy {
+    width: 80%;
+    text-align: justify;
+  }
+
+  &__paragraph {
+    font-size: $font-s;
+    line-height: 3rem;
+    margin-bottom: 4rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__image-container {
+    height: 40rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__image {
+    background: url('../images/latest-news.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 85%;
+    width: 85%;
+  }
+}
