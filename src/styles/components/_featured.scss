@@ -1,31 +1,43 @@
 .featured {
   position: relative;
 
-  &__artist {
-    background: rgba($dark-grey, 0.4);
+  &__container {
+    background: rgba($dark-grey, 0.3);
     border: 1px solid rgba($white, 0.6);
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 16rem;
-    width: 35rem;
-    text-transform: uppercase;
+    height: 25rem;
+    width: 50rem;
     transform: translate(-50%, -50%);
   }
 
-  &__artist-name {
-    background: rgba($white, 0.4);
+  &__details {
+    background: rgba($white, 0.5);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     border: 1px solid rgba($white, 0.6);
     color: $white;
-    height: 14.6rem;
+    height: 23.6rem;
     margin: 0.6rem;
     padding: 0;
     font-family: 'Oswald', Helvetica, Arial, sans-serif;
-    font-size: $font-l;
     text-align: center;
+  }
+
+  &__artist {
+    font-size: $font-xl;
+    margin-bottom: 2rem;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
     text-transform: uppercase;
+  }
+
+  &__date-time {
+    color: $dark-grey;
+    font-size: $font-m;
+    font-weight: 400;
+    margin-bottom: 3rem;
   }
 }

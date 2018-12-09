@@ -64,7 +64,7 @@ class Countdown extends Component {
 
   render() {
     return (
-      <Slide left delay={800}>
+      <Slide left delay={600}>
         <div className="countdown">
           <div className="countdown__top">
             {this.state.eventPassed ? 'Event is over' : 'Event starts in:'}

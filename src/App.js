@@ -10,6 +10,7 @@ import Header from './components/Header';
 import Featured from './components/Featured';
 import EventInfo from './components/EventInfo';
 import Latest from './components/Latest';
+import Pricing from './components/Pricing';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
           <Featured />
           <EventInfo />
           <Latest />
+          <Pricing />
         </div>
       </MuiThemeProvider>
     );
