@@ -1,0 +1,9 @@
+.location {
+  &__heading {
+    font-family: 'Oswald', Helvetica, Arial, sans-serif;
+    font-size: $font-xl;
+    padding: 8rem 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
