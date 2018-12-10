@@ -1,4 +1,5 @@
 import React from 'react';
+import { scroller } from 'react-scroll';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -8,6 +9,15 @@ import Grid from '@material-ui/core/Grid';
 import Zoom from 'react-reveal/Zoom';
 
 const EventInfo = () => {
+  const scrollToElement = element => {
+    scroller.scrollTo(element, {
+      duration: 1000,
+      delay: 100,
+      smooth: true,
+      offset: -100
+    });
+  };
+
   return (
     <div className="event-info">
       <Grid
@@ -42,6 +52,7 @@ const EventInfo = () => {
                   variant="contained"
                   color="primary"
                   size="large"
+                  onClick={() => scrollToElement('Latest News')}
                   style={{ fontSize: '1.2rem' }}
                   className="event-info__button"
                 >
@@ -75,6 +86,7 @@ const EventInfo = () => {
                   variant="contained"
                   color="primary"
                   size="large"
+                  onClick={() => scrollToElement('Pricing')}
                   style={{ fontSize: '1.2rem' }}
                   className="event-info__button"
                 >
@@ -113,6 +125,7 @@ const EventInfo = () => {
                   variant="contained"
                   color="primary"
                   size="large"
+                  onClick={() => console.log('FAQ')}
                   style={{ fontSize: '1.2rem', marginRight: '1rem' }}
                   className="event-info__button"
                 >
@@ -122,6 +135,7 @@ const EventInfo = () => {
                   variant="outlined"
                   color="primary"
                   size="large"
+                  onClick={() => console.log('Menu')}
                   style={{ fontSize: '1.2rem' }}
                   className="event-info__button"
                 >

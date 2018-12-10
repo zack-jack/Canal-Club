@@ -18,9 +18,9 @@ class Pricing extends Component {
       'Tacos authentic irony, snackwave lyft kombucha palo santo 8-bit. Poutine mumblecore street art.'
     ],
     linkto: [
-      'http://www.ticketfly.com/',
-      'http://www.ticketfly.com/',
-      'http://www.ticketfly.com/'
+      'http://www.ticketfly.com/venue/7747-canal-club/',
+      'http://www.ticketfly.com/venue/7747-canal-club/',
+      'http://www.ticketfly.com/venue/7747-canal-club/'
     ],
     transitionDelay: [500, 0, 500]
   };
@@ -50,6 +50,9 @@ class Pricing extends Component {
                   variant="contained"
                   color="secondary"
                   size="large"
+                  onClick={() => {
+                    window.location = this.state.linkto[i];
+                  }}
                   style={{ fontSize: '1.4rem' }}
                   className="pricing__button"
                 >

@@ -38,6 +38,7 @@
     color: $red;
     display: flex;
     flex-direction: row;
+    margin-bottom: 2rem;
     font-family: 'Oswald', Helvetica, Arial, sans-serif;
   }
 
@@ -49,6 +50,13 @@
       align-self: flex-end;
       font-size: $font-l;
     }
+  }
+
+  &__subtitle {
+    color: $dark-grey;
+    font-family: 'Oswald', Helvetica, Arial, sans-serif;
+    font-size: $font-m;
+    text-transform: uppercase;
   }
 
   &__copy {

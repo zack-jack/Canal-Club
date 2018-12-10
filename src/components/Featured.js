@@ -1,10 +1,20 @@
 import React from 'react';
+import { scroller } from 'react-scroll';
 import Button from '@material-ui/core/Button';
 
 import Countdown from './Countdown';
 import FeaturedSlider from './FeaturedSlider';
 
 const Featured = () => {
+  const scrollToPricing = element => {
+    scroller.scrollTo(element, {
+      duration: 1000,
+      delay: 100,
+      smooth: true,
+      offset: -100
+    });
+  };
+
   return (
     <div className="featured">
       <FeaturedSlider />
@@ -17,6 +27,7 @@ const Featured = () => {
             variant="contained"
             color="secondary"
             size="large"
+            onClick={() => scrollToPricing('Pricing')}
             style={{ fontSize: '1.6rem' }}
             className="featured__button"
           >

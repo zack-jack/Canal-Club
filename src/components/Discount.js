@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { scroller } from 'react-scroll';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Fade from 'react-reveal/Fade';
@@ -23,6 +24,15 @@ class Discount extends Component {
       this.incPercentage();
     }, 30);
   }
+
+  scrollToElement = element => {
+    scroller.scrollTo(element, {
+      duration: 1000,
+      delay: 100,
+      smooth: true,
+      offset: -100
+    });
+  };
 
   render() {
     return (
@@ -57,6 +67,7 @@ class Discount extends Component {
                 </div>
                 <div className="discount__percentage--off">off</div>
               </div>
+              <div className="discount__subtitle">With ticket purchase</div>
             </Fade>
 
             <Fade>
@@ -70,6 +81,7 @@ class Discount extends Component {
                   variant="contained"
                   color="primary"
                   size="large"
+                  onClick={() => this.scrollToElement('Pricing')}
                   style={{ fontSize: '1.2rem' }}
                   className="discount__button"
                 >
