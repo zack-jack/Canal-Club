@@ -1,4 +1,59 @@
 .pricing {
   background: $dark-grey;
   color: $white;
+  padding: 8rem 0;
+
+  &__container {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  &__header {
+    font-size: $font-l;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__box-container {
+    padding: 8rem 0;
+  }
+
+  &__box {
+    color: $dark-grey;
+    height: 47rem;
+    text-align: center;
+  }
+
+  &__title {
+    color: $red;
+    font-family: 'Oswald', Helvetica, Arial, sans-serif;
+    font-size: $font-xl;
+    height: 8rem;
+    margin-top: 2rem;
+  }
+
+  &__subtitle {
+    align-items: center;
+    display: flex;
+    height: 15rem;
+    justify-content: center;
+  }
+
+  &__subtitle-text {
+    font-family: 'Oswald', Helvetica, Arial, sans-serif;
+    font-size: $font-l;
+    text-transform: uppercase;
+    width: 80%;
+  }
+
+  &__description {
+    font-size: $font-s;
+    margin: 2rem 0;
+  }
+
+  &__actions {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
 }
