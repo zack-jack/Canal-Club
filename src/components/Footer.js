@@ -7,6 +7,29 @@ import Button from '@material-ui/core/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Footer = () => {
+  const socialLinks = [
+    {
+      name: 'facebook',
+      link: 'https://www.facebook.com/TheCanalClub/',
+      icon: ['fab', 'facebook-f']
+    },
+    {
+      name: 'twitter',
+      link: 'https://twitter.com/thecanalclub?lang=en',
+      icon: ['fab', 'twitter']
+    },
+    {
+      name: 'instagram',
+      link: 'https://www.instagram.com/thecanalclub/',
+      icon: ['fab', 'instagram']
+    },
+    {
+      name: 'email',
+      link: '/',
+      icon: ['fas', 'envelope']
+    }
+  ];
+
   const scrollToTop = element => {
     scroller.scrollTo(element, {
       duration: 1000,
@@ -15,52 +38,29 @@ const Footer = () => {
     });
   };
 
+  const renderSocialLinks = socialLinks.map(socialLink => {
+    return (
+      <a
+        href={socialLink.link}
+        rel="noopener noreferrer"
+        target="_blank"
+        key={socialLink.name}
+        className="footer__social-link"
+      >
+        <FontAwesomeIcon
+          icon={socialLink.icon}
+          size="3x"
+          className={`footer__social--${socialLink.name}`}
+        />
+      </a>
+    );
+  });
+
   return (
     <footer className="footer">
       <Fade delay={300}>
         <div className="footer__logo">The Canal Club</div>
-        <div className="footer__social">
-          <a
-            href="https://www.facebook.com/TheCanalClub/"
-            target="_blank"
-            className="footer__social-link"
-          >
-            <FontAwesomeIcon
-              icon={['fab', 'facebook-f']}
-              size="3x"
-              className="footer__social--facebook"
-            />
-          </a>
-          <a
-            href="https://twitter.com/thecanalclub?lang=en"
-            target="_blank"
-            className="footer__social-link"
-          >
-            <FontAwesomeIcon
-              icon={['fab', 'twitter']}
-              size="3x"
-              className="footer__social--twitter"
-            />
-          </a>
-          <a
-            href="https://www.instagram.com/thecanalclub/"
-            target="_blank"
-            className="footer__social-link"
-          >
-            <FontAwesomeIcon
-              icon={['fab', 'instagram']}
-              size="3x"
-              className="footer__social--instagram"
-            />
-          </a>
-          <a href="/" className="footer__social-link">
-            <FontAwesomeIcon
-              icon="envelope"
-              size="3x"
-              className="footer__social--email"
-            />
-          </a>
-        </div>
+        <div className="footer__social">{renderSocialLinks}</div>
         <div className="footer__copyright">
           &copy; {new Date().getFullYear()}. All rights reserved.
         </div>
