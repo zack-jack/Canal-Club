@@ -27,9 +27,9 @@ class Pricing extends Component {
 
   renderBoxes = () =>
     this.state.prices.map((box, i) => (
-      <Grid item xs={3}>
+      <Grid item xs={3} key={i}>
         <Zoom delay={this.state.transitionDelay[i]}>
-          <Card raised={true} key={i} className="pricing__box">
+          <Card raised={true} className="pricing__box">
             <div className="pricing__content">
               <CardContent className="pricing__title">
                 ${this.state.prices[i]}
