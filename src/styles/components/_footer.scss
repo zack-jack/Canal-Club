@@ -1,0 +1,34 @@
+.footer {
+  align-items: center;
+  background: $dark-grey;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 0;
+
+  &__logo {
+    font-family: 'Oswald', Helvetica, Arial, sans-serif;
+    font-size: $font-xxl;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__copyright {
+    font-size: $font-s;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  &__social {
+    margin-bottom: 1rem;
+    padding: 2rem 0;
+
+    &--facebook,
+    &--twitter,
+    &--instagram {
+      margin-right: 6rem;
+    }
+  }
+}

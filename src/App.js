@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import theme from './theme';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import {
+  faFacebookF,
+  faTwitter,
+  faInstagram
+} from '@fortawesome/free-brands-svg-icons';
 
 import 'normalize.css';
 import './styles/App.scss';
@@ -13,6 +21,8 @@ import Latest from './components/Latest';
 import Pricing from './components/Pricing';
 import Location from './components/Location';
 import Footer from './components/Footer';
+
+library.add(faEnvelope, faFacebookF, faTwitter, faInstagram);
 
 class App extends Component {
   render() {
