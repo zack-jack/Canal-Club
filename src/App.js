@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Element } from 'react-scroll';
 
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import theme from './theme';
@@ -30,11 +31,23 @@ class App extends Component {
       <MuiThemeProvider theme={theme}>
         <div className="App">
           <Header />
-          <Featured />
-          <EventInfo />
-          <Latest />
-          <Pricing />
-          <Location />
+
+          <Element name="Featured Artist">
+            <Featured />
+          </Element>
+          <Element name="Event Info">
+            <EventInfo />
+          </Element>
+          <Element name="Latest News">
+            <Latest />
+          </Element>
+          <Element name="Pricing">
+            <Pricing />
+          </Element>
+          <Element name="Location">
+            <Location />
+          </Element>
+
           <Footer />
         </div>
       </MuiThemeProvider>

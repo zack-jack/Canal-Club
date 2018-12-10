@@ -1,4 +1,5 @@
 import React from 'react';
+import { scroller } from 'react-scroll';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -13,13 +14,24 @@ const SideDrawer = props => {
     'Menu'
   ];
 
+  const scrollToElement = element => {
+    scroller.scrollTo(element, {
+      duration: 1000,
+      delay: 100,
+      smooth: true,
+      offset: -100
+    });
+
+    props.onClose(false);
+  };
+
   const renderlistItems = navList.map(listItem => {
     return (
       <ListItem
         button
         className="side-drawer__item"
         style={{ padding: '3rem 20rem 3rem 3rem' }}
-        onClick={() => console.log(listItem)}
+        onClick={() => scrollToElement(listItem)}
         key={listItem}
       >
         {listItem}

@@ -31,4 +31,12 @@
       margin-right: 6rem;
     }
   }
+
+  &__social-link {
+    color: $white;
+
+    &:hover {
+      color: $grey;
+    }
+  }
 }
