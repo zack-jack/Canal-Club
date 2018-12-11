@@ -10,7 +10,7 @@ const SideDrawer = props => {
     'Event Info',
     'Latest News',
     'Pricing',
-    'Location',
+    'Get Directions',
     'Menu'
   ];
 

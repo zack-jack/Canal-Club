@@ -44,7 +44,7 @@ class App extends Component {
           <Element name="Pricing">
             <Pricing />
           </Element>
-          <Element name="Location">
+          <Element name="Get Directions">
             <Location />
           </Element>
 
