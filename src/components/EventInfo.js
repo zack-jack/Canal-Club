@@ -10,9 +10,17 @@ import {
   Grid
 } from '@material-ui/core';
 
+import FAQ from './FAQ';
 import Menu from './Menu';
 
-const EventInfo = ({ menuVisible, menuOpen, menuClose }) => {
+const EventInfo = ({
+  faqVisible,
+  faqOpen,
+  faqClose,
+  menuVisible,
+  menuOpen,
+  menuClose
+}) => {
   const scrollToElement = element => {
     scroller.scrollTo(element, {
       duration: 1000,
@@ -129,12 +137,17 @@ const EventInfo = ({ menuVisible, menuOpen, menuClose }) => {
                   variant="contained"
                   color="primary"
                   size="large"
-                  onClick={() => console.log('FAQ')}
+                  onClick={faqOpen}
                   style={{ fontSize: '1.2rem', marginRight: '1rem' }}
                   className="event-info__button"
                 >
                   FAQ
                 </Button>
+                <FAQ
+                  faqVisible={faqVisible}
+                  faqOpen={faqOpen}
+                  faqClose={faqClose}
+                />
                 <Button
                   variant="outlined"
                   color="primary"

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, scroller } from 'react-scroll';
+import { Link } from 'react-scroll';
 import { AppBar, IconButton, Toolbar } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 

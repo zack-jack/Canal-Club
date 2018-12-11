@@ -29,6 +29,7 @@ class App extends Component {
   state = {
     drawerOpen: false,
     headerVisible: false,
+    faqOpen: false,
     menuOpen: false
   };
 
@@ -64,6 +65,18 @@ class App extends Component {
     });
   };
 
+  handleFaqOpen = () => {
+    this.setState({
+      faqOpen: true
+    });
+  };
+
+  handleFaqClose = () => {
+    this.setState({
+      faqOpen: false
+    });
+  };
+
   handleMenuOpen = () => {
     this.setState({
       menuOpen: true
@@ -94,6 +107,9 @@ class App extends Component {
           </Element>
           <Element name="Event Info">
             <EventInfo
+              faqVisible={this.state.faqOpen}
+              faqOpen={this.handleFaqOpen}
+              faqClose={this.handleFaqClose}
               menuVisible={this.state.menuOpen}
               menuOpen={this.handleMenuOpen}
               menuClose={this.handleMenuClose}

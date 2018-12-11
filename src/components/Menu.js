@@ -11,7 +11,7 @@ import {
 
 import MenuItem from './MenuItem';
 
-const Menu = ({ menuVisible, menuOpen, menuClose }) => {
+const Menu = ({ menuVisible, menuClose }) => {
   const menu = [
     {
       title: 'Basket of Fries',
