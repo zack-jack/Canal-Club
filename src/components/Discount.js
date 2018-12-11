@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { scroller } from 'react-scroll';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
+import { Button, Grid } from '@material-ui/core';
 import Fade from 'react-reveal/Fade';
 import Slide from 'react-reveal/Slide';
 

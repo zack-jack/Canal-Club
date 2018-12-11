@@ -1,8 +1,7 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import IconButton from '@material-ui/core/IconButton';
+import { Link, scroller } from 'react-scroll';
+import { AppBar, IconButton, Toolbar } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import Toolbar from '@material-ui/core/Toolbar';
 
 import SideDrawer from './SideDrawer';
 
@@ -25,12 +24,18 @@ const Header = ({
         }}
       >
         <Toolbar>
-          <div className="header__logo">
+          <Link
+            to="Featured Artist"
+            smooth={true}
+            duration={1000}
+            delay={100}
+            className="header__logo"
+          >
             <div className="header__logo-title">The Canal Club</div>
             <div className="header__logo-subtitle">
               Richmond's Premiere Music Venue
             </div>
-          </div>
+          </Link>
 
           <div className="header__menu-icon">
             <IconButton
@@ -38,7 +43,7 @@ const Header = ({
               color="inherit"
               onClick={() => toggleDrawer(true)}
             >
-              <MenuIcon />
+              <MenuIcon fontSize="large" />
             </IconButton>
           </div>
           <SideDrawer

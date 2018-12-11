@@ -1,11 +1,13 @@
 import React from 'react';
 import Close from '@material-ui/icons/Close';
-import IconButton from '@material-ui/core/IconButton';
-import Dialog from '@material-ui/core/Dialog';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import Divider from '@material-ui/core/Divider';
-import Grid from '@material-ui/core/Grid';
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  Divider,
+  Grid,
+  IconButton
+} from '@material-ui/core';
 
 import MenuItem from './MenuItem';
 

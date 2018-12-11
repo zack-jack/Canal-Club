@@ -1,7 +1,7 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import Grid from '@material-ui/core/Grid';
 import Slide from 'react-reveal/Slide';
+import { Grid } from '@material-ui/core';
 
 const LatestCopy = () => {
   return (

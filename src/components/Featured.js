@@ -1,6 +1,6 @@
 import React from 'react';
 import { scroller } from 'react-scroll';
-import Button from '@material-ui/core/Button';
+import { Button } from '@material-ui/core';
 
 import Countdown from './Countdown';
 import FeaturedSlider from './FeaturedSlider';

@@ -1,8 +1,6 @@
 import React from 'react';
 import { scroller } from 'react-scroll';
-import Drawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
+import { Drawer, List, ListItem } from '@material-ui/core/';
 
 const SideDrawer = ({
   drawerOpen,
