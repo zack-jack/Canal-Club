@@ -84,6 +84,9 @@ class App extends Component {
             drawerOpen={this.state.drawerOpen}
             headerVisible={this.state.headerVisible}
             toggleDrawer={this.toggleDrawer}
+            menuVisible={this.state.menuOpen}
+            menuOpen={this.handleMenuOpen}
+            menuClose={this.handleMenuClose}
           />
 
           <Element name="Featured Artist">
@@ -91,7 +94,7 @@ class App extends Component {
           </Element>
           <Element name="Event Info">
             <EventInfo
-              visible={this.state.menuOpen}
+              menuVisible={this.state.menuOpen}
               menuOpen={this.handleMenuOpen}
               menuClose={this.handleMenuClose}
             />

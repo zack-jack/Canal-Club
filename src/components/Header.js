@@ -6,7 +6,14 @@ import Toolbar from '@material-ui/core/Toolbar';
 
 import SideDrawer from './SideDrawer';
 
-const Header = ({ drawerOpen, headerVisible, toggleDrawer }) => {
+const Header = ({
+  drawerOpen,
+  headerVisible,
+  toggleDrawer,
+  menuVisible,
+  menuOpen,
+  menuClose
+}) => {
   return (
     <div>
       <AppBar
@@ -35,8 +42,11 @@ const Header = ({ drawerOpen, headerVisible, toggleDrawer }) => {
             </IconButton>
           </div>
           <SideDrawer
-            open={drawerOpen}
-            onClose={value => toggleDrawer(value)}
+            drawerOpen={drawerOpen}
+            onDrawerClose={value => toggleDrawer(value)}
+            menuVisible={menuVisible}
+            menuOpen={menuOpen}
+            menuClose={menuClose}
           />
         </Toolbar>
       </AppBar>

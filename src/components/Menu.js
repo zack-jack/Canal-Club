@@ -9,7 +9,7 @@ import Grid from '@material-ui/core/Grid';
 
 import MenuItem from './MenuItem';
 
-const Menu = ({ visible, menuOpen, menuClose }) => {
+const Menu = ({ menuVisible, menuOpen, menuClose }) => {
   const menu = [
     {
       title: 'Basket of Fries',
@@ -90,7 +90,7 @@ const Menu = ({ visible, menuOpen, menuClose }) => {
       aria-describedby="menu"
       fullWidth={true}
       maxWidth="md"
-      open={visible}
+      open={menuVisible}
       onBackdropClick={menuClose}
       className="menu"
     >

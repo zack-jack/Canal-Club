@@ -4,14 +4,19 @@ import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 
-const SideDrawer = props => {
+const SideDrawer = ({
+  drawerOpen,
+  onDrawerClose,
+  menuVisible,
+  menuOpen,
+  menuClose
+}) => {
   const navList = [
     'Featured Artist',
     'Event Info',
     'Latest News',
     'Pricing',
-    'Get Directions',
-    'Menu'
+    'Get Directions'
   ];
 
   const scrollToElement = element => {
@@ -22,7 +27,12 @@ const SideDrawer = props => {
       offset: -100
     });
 
-    props.onClose(false);
+    onDrawerClose(false);
+  };
+
+  const onMenuClick = () => {
+    menuOpen();
+    onDrawerClose(false);
   };
 
   const renderlistItems = navList.map(listItem => {
@@ -42,9 +52,9 @@ const SideDrawer = props => {
   return (
     <Drawer
       anchor="right"
-      open={props.open}
+      open={drawerOpen}
       className="side-drawer"
-      onClose={() => props.onClose(false)}
+      onClose={() => onDrawerClose(false)}
     >
       <List
         component="nav"
@@ -52,6 +62,15 @@ const SideDrawer = props => {
         className="side-drawer__list"
       >
         {renderlistItems}
+        <ListItem
+          button
+          className="side-drawer__item"
+          style={{ padding: '3rem 20rem 3rem 3rem' }}
+          onClick={() => onMenuClick()}
+          key="Menu"
+        >
+          Menu
+        </ListItem>
       </List>
     </Drawer>
   );

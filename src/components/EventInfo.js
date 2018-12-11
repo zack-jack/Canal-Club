@@ -10,7 +10,7 @@ import Zoom from 'react-reveal/Zoom';
 
 import Menu from './Menu';
 
-const EventInfo = ({ visible, menuOpen, menuClose }) => {
+const EventInfo = ({ menuVisible, menuOpen, menuClose }) => {
   const scrollToElement = element => {
     scroller.scrollTo(element, {
       duration: 1000,
@@ -144,7 +144,7 @@ const EventInfo = ({ visible, menuOpen, menuClose }) => {
                   Menu
                 </Button>
                 <Menu
-                  visible={visible}
+                  menuVisible={menuVisible}
                   menuOpen={menuOpen}
                   menuClose={menuClose}
                 />
