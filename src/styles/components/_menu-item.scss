@@ -1,0 +1,16 @@
+.menu-item {
+  color: $dark-grey;
+  font-size: $font-s;
+  margin-bottom: 2rem;
+
+  &__title {
+    background: $light-grey;
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+  }
+
+  &__description {
+    margin-bottom: 1rem;
+    width: 90%;
+  }
+}
