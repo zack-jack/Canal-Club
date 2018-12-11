@@ -4,6 +4,8 @@ import { Button, Grid } from '@material-ui/core';
 import Fade from 'react-reveal/Fade';
 import Slide from 'react-reveal/Slide';
 
+import album from '../images/album.jpg';
+
 class Discount extends Component {
   state = {
     discountStart: 0,
@@ -51,6 +53,7 @@ class Discount extends Component {
             <Slide left>
               <div className="discount__image-container">
                 <img
+                  src={album}
                   alt="Tranquility Base Hotel & Casino Album"
                   className="discount__image"
                 />

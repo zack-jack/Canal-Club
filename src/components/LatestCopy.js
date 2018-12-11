@@ -3,6 +3,8 @@ import Fade from 'react-reveal/Fade';
 import Slide from 'react-reveal/Slide';
 import { Grid } from '@material-ui/core';
 
+import latestNews from '../images/latest-news.jpg';
+
 const LatestCopy = () => {
   return (
     <div className="latest-copy-container">
@@ -46,7 +48,11 @@ const LatestCopy = () => {
           <Grid item xs={6}>
             <Slide right>
               <div className="latest-copy__image-container">
-                <img alt="Arctic Monkeys" className="latest-copy__image" />
+                <img
+                  src={latestNews}
+                  alt="Arctic Monkeys"
+                  className="latest-copy__image"
+                />
               </div>
             </Slide>
           </Grid>
