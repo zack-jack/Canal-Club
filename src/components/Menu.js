@@ -9,7 +9,7 @@ import Grid from '@material-ui/core/Grid';
 
 import MenuItem from './MenuItem';
 
-const Menu = ({ dialogOpen, dialogClose }) => {
+const Menu = ({ visible, menuOpen, menuClose }) => {
   const menu = [
     {
       title: 'Basket of Fries',
@@ -37,7 +37,6 @@ const Menu = ({ dialogOpen, dialogClose }) => {
       description: 'served with marinara sauce',
       price: 4.95
     },
-    ,
     {
       title: 'Quesadilla',
       description:
@@ -49,7 +48,6 @@ const Menu = ({ dialogOpen, dialogClose }) => {
       description: 'served with a side of ranch dressing',
       price: 5.95
     },
-
     {
       title: 'Beer',
       description: 'Bud Light, Coors Light, Pabst Blue Ribbon - 12oz',
@@ -92,14 +90,14 @@ const Menu = ({ dialogOpen, dialogClose }) => {
       aria-describedby="menu"
       fullWidth={true}
       maxWidth="md"
-      open={dialogOpen}
-      onBackdropClick={dialogClose}
+      open={visible}
+      onBackdropClick={menuClose}
       className="menu"
     >
       <DialogTitle>
         <div className="menu__title">
           <div className="menu__header">Menu</div>
-          <IconButton onClick={dialogClose} className="menu__button">
+          <IconButton onClick={menuClose} className="menu__button">
             <Close />
           </IconButton>
         </div>
