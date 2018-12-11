@@ -1,7 +1,7 @@
 .pricing {
-  background: $dark-grey;
+  background: $grey;
   color: $white;
-  padding: 8rem 0;
+  padding: 5rem 0;
 
   &__container {
     margin: 0 auto;
@@ -9,13 +9,15 @@
   }
 
   &__header {
-    font-size: $font-l;
+    font-family: 'Oswald', Helvetica, Arial, sans-serif;
+    font-size: $font-xl;
     text-align: center;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.15);
     text-transform: uppercase;
   }
 
   &__box-container {
-    padding: 8rem 0;
+    padding: 11rem 0;
   }
 
   &__box {

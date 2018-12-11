@@ -74,7 +74,7 @@ class Pricing extends Component {
           <h2 className="pricing__header">Pricing</h2>
           <Divider
             variant="middle"
-            style={{ backgroundColor: 'rgba(255, 255, 255, 0.25)' }}
+            style={{ backgroundColor: 'rgba(255, 255, 255, 0.4)' }}
           />
           <Grid
             container
