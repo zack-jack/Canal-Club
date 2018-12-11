@@ -1,0 +1,9 @@
+.faq-item {
+  color: $dark-grey;
+  font-size: $font-s;
+  margin-bottom: 2rem;
+
+  &__answer {
+    margin-bottom: 1rem;
+  }
+}

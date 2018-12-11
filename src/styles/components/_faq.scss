@@ -1,0 +1,18 @@
+.faq {
+  &__title {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__header {
+    color: $red;
+    font-family: 'Oswald', Helvetica, Arial, sans-serif;
+    font-size: $font-l;
+    text-transform: uppercase;
+  }
+
+  &__items {
+    padding: 3rem 0;
+  }
+}
